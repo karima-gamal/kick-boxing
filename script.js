@@ -1,46 +1,15 @@
- function calculateBMI(){
+ window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
 
-let height = document.getElementById("height").value / 100;
-let weight = document.getElementById("weight").value;
+const sections = document.querySelectorAll('.section');
 
-let bmi = weight / (height * height);
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
 
-document.getElementById("bmiResult").innerText =
-"Your BMI is " + bmi.toFixed(1);
-
-}
-
-
-
-function calculateCalories(){
-
-let weight = document.getElementById("weightCal").value;
-let time = document.getElementById("time").value;
-
-let calories = weight * 0.14 * time;
-
-document.getElementById("caloriesResult").innerText =
-"You burned " + calories.toFixed(0) + " calories 🔥";
-
-}
-// list
-function toggleMenu(){
-
-let menu = document.getElementById("navLinks");
-
-menu.classList.toggle("show");
-
-}
-
-function calculateCalories(){
-
-let weight = document.getElementById("weight").value;
-let time = document.getElementById("time").value;
-
-let calories = weight * 0.14 * time;
-
-document.getElementById("caloriesResult").innerText =
-"You burned approximately " + calories.toFixed(0) + " calories 🔥";
-
-}
-
+sections.forEach(section => observer.observe(section));
