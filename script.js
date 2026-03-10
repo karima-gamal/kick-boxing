@@ -1,15 +1,22 @@
- window.addEventListener("load", () => {
-  document.body.classList.add("loaded");
-});
+ function toggleMenu(){
+  let menu = document.getElementById("navLinks");
+  menu.classList.toggle("show");
+}
 
-const sections = document.querySelectorAll('.section');
+function calculateBMI(){
+  let height = document.getElementById("height").value / 100;
+  let weight = document.getElementById("weight").value;
+  if(height && weight){
+    let bmi = weight/(height*height);
+    document.getElementById("bmiResult").innerText = "Your BMI is " + bmi.toFixed(1);
+  }
+}
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.1 });
-
-sections.forEach(section => observer.observe(section));
+function calculateCalories(){
+  let weight = document.getElementById("weightCal").value;
+  let time = document.getElementById("time").value;
+  if(weight && time){
+    let calories = weight*0.14*time;
+    document.getElementById("caloriesResult").innerText = "You burned " + calories.toFixed(0) + " calories 🔥";
+  }
+}

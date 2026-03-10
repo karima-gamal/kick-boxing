@@ -1,108 +1,95 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Karima | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kickboxing Training</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- Navbar -->
-    <nav>
-        <!-- <div class="logo">Karima</div> -->
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<!-- Navbar -->
+<nav class="navbar">
+<div class="logo">Kickboxing</div>
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+<ul class="nav-links" id="navLinks">
+<li><a href="#">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#programs">Programs</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#calculators">Calculators</a></li>
+<!-- <li><a href="#projects">Projects</a></li> -->
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
-    <div class="hero-top">
-        <div class="hero-image">
-            <img src="imges/portfile.jpg" alt="Karima">
-        </div>
-        <div class="hero-text">
-            <h1>Hi, I'm Karima 👋</h1>
-            <p>Front-End Developer | Web Designer
-                <br>
-                & Software Engineer
-            </p>
-            <button onclick="location.href='#projects'">View My Work</button>
-        </div>
-    </div>
-</header>
+<!-- Hero -->
+<section class="hero">
+<div>
+<h1>Train Like a Fighter</h1>
+<p>Build strength, confidence, and endurance with Kickboxing.</p>
+<button>Start Training</button>
+<button>Learn More</button>
+</div>
+</section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Me</h2>
+<!-- About -->
+<section class="about" id="about">
+<h2>About Kickboxing</h2>
+<p>Kickboxing is a high-energy combat sport that combines punches and kicks. It improves fitness, burns calories, and increases confidence.</p>
+</section>
 
-        <div class="about-container">
+<!-- Benefits -->
+<section class="benefits">
+<div class="card"><h3>Burn Calories</h3><p>High intensity workout.</p></div>
+<div class="card"><h3>Build Strength</h3><p>Improve muscle power.</p></div>
+<div class="card"><h3>Improve Speed</h3><p>Faster reactions.</p></div>
+<div class="card"><h3>Boost Confidence</h3><p>Learn self-defense.</p></div>
+</section>
 
-           
+<!-- Calculators -->
+<section class="calculators" id="calculators">
+<div class="bmi-box">
+<h2>BMI Calculator</h2>
+<input type="number" id="height" placeholder="Height (cm)">
+<input type="number" id="weight" placeholder="Weight (kg)">
+<button onclick="calculateBMI()">Calculate</button>
+<p id="bmiResult"></p>
+</div>
+<div class="calories-box">
+<h2>Calories Burned</h2>
+<input type="number" id="weightCal" placeholder="Weight (kg)">
+<input type="number" id="time" placeholder="Training time (minutes)">
+<button onclick="calculateCalories()">Calculate</button>
+<p id="caloriesResult"></p>
+</div>
+</section>
 
-            <!-- الكلام على اليمين -->
-            <div class="about-content">
-                <p>
-                    I am a Computer Science graduate (2023) with experience in Technical Support 
-                    at Telecom Egypt. I am passionate about Front-End Development and building 
-                    responsive and user-friendly websites.
-                </p>
+<!-- Programs -->
+<section class="programs" id="programs">
+<h2>Training Programs</h2>
+<div class="program-container">
+<div class="program-card"><h3>Beginner</h3><p>Basic punches and kicks.</p><button>Join</button></div>
+<div class="program-card"><h3>Intermediate</h3><p>Combination training and bag work.</p><button>Join</button></div>
+<div class="program-card"><h3>Advanced</h3><p>Sparring and high intensity training.</p><button>Join</button></div>
+</div>
+</section>
 
-                <div class="about-details">
-                    <div>
-                        <h3>🎓 Education</h3>
-                        <p>Computer Science - 2023</p>
-                    </div>
+<!-- Gallery -->
+<section class="gallery" id="gallery">
+<h2>Training Gallery</h2>
+<div class="gallery-container">
+<img src="imges/port4.jpg">
+<img src="imges/port2.jpg">
+<img src="imges/port1.jpg">
+<img src="imges/700de7076403caf182b0abe9f6269f46.jpg">
+</div>
+</section>
 
-                    <div>
-                        <h3>💼 Experience</h3>
-                        <p>Technical Support - Telecom Egypt (2023–2025)</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <!-- <section id="projects" class="projects">
-    <h2>My Projects</h2>
-    <div class="projects-container">
-
-        <div class="project-card">
-            <h3>Medical Landing Page</h3>
-            <p>Responsive website for medical services.</p>
-            <div class="project-buttons">
-                <a href="https://karima-gamal.github.io/Al-Nas-Hospital/"  target="_blank" class="btn">Live Demo</a>
-                <a href="https://karima-gamal.github.io/Al-Nas-Hospital/" target="_blank" class="btn">GitHub</a>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <h3>Portfolio Website</h3>
-            <p>Personal portfolio website with responsive design.</p>
-            <div class="project-buttons">
-                <a href=" https://karima-gamal.github.io/my-portfolio/" class="btn">Live Demo</a>
-                <a href=" https://karima-gamal.github.io/my-portfolio/" class="btn">GitHub</a>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <h3>kick boxing website</h3>
-            <p>Responsive sports website featuring training programs.</p>
-            <div class="project-buttons">
-                <a href=" https://karima-gamal.github.io/kick-boxing" class="btn">Live Demo</a>
-                <a href=" https://karima-gamal.github.io/kick-boxing" class="btn">GitHub</a>
-            </div>
-        </div>
-
-    </div>
-</section> -->
-
- <section id="projects" class="projects">
+<!-- Projects -->
+<!-- <section id="projects" class="projects">
 <h2>My Projects</h2>
 <div class="projects-container">
 
@@ -137,27 +124,21 @@
 </div>
 
 </div>
-</section> 
+</section> -->
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-
-    <p>If you want to get in touch, feel free to send me a message or email me directly.</p>
-
-    <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
-
-    <p class="email-link">Or email me directly at:
-         <a href="mailto:your@email.com">kg385742@gmail.com
-        <br> 
-    </a>phone num:01270691296</p>
+<!-- Contact -->
+<section class="contact" id="contact">
+<h2>Contact Us</h2>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea placeholder="Message"></textarea>
+<button>Send Message</button>
 </section>
 
-    <script src="script.js"></script>
+<!-- Footer -->
+<footer>
+<p>© 2026 Kickboxing Training</p>
+</footer>
+<script src="script.js" ></script>
 </body>
 </html>
