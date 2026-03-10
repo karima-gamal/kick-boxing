@@ -1,0 +1,165 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kickboxing Training</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<!-- <div class="logo">Kickboxing</div>
+
+<ul class="nav-links">
+<li><a href="#">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#programs">Programs</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#bmi">BMI</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul> -->
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="#">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#programs">Programs</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Train Like a Fighter</h1>
+
+<p>Build strength, confidence and endurance with Kickboxing.</p>
+
+<button>Start Training</button>
+
+</div>
+
+</section>
+
+
+<section id="about" class="about">
+
+<h2>About Kickboxing</h2>
+
+<p>
+Kickboxing is a powerful martial art that combines punches and kicks.
+It improves fitness, burns calories, and increases confidence.
+</p>
+
+</section>
+
+
+<section id="programs" class="programs">
+
+<h2>Training Programs</h2>
+
+<div class="program-container">
+
+<div class="card">
+<h3>Beginner</h3>
+<p>Basic punches and kicks.</p>
+</div>
+
+<div class="card">
+<h3>Intermediate</h3>
+<p>Combination training and bag work.</p>
+</div>
+
+<div class="card">
+<h3>Advanced</h3>
+<p>Sparring and high intensity training.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="gallery" class="gallery">
+
+<h2>Training Gallery</h2>
+
+<div class="gallery-container">
+
+<img src="imges/700de7076403caf182b0abe9f6269f46.jpg">
+
+<img src="imges/port2.jpg">
+
+<img src="imges/port1.jpg">
+
+</div>
+
+</section>
+
+
+<section class="calculators">
+
+<div class="bmi-box">
+
+<h2>BMI Calculator</h2>
+
+<input type="number" id="height" placeholder="Height (cm)">
+<input type="number" id="weight" placeholder="Weight (kg)">
+
+<button onclick="calculateBMI()">Calculate</button>
+
+<p id="bmiResult"></p>
+
+</div>
+
+
+<div class="calories-box">
+
+<h2>Calories Burned</h2>
+
+<input type="number" id="weightCal" placeholder="Weight (kg)">
+<input type="number" id="time" placeholder="Training time (minutes)">
+
+<button onclick="calculateCalories()">Calculate</button>
+
+<p id="caloriesResult"></p>
+
+</div>
+
+</section>
+
+
+<section id="contact" class="contact">
+
+<h2>Contact Us</h2>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea placeholder="Message"></textarea>
+
+<button>Send</button>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 Kickboxing Website</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

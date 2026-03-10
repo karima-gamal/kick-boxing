@@ -1,0 +1,182 @@
+ body{
+margin:0;
+font-family:Arial;
+background:#0f0f0f;
+color:white;
+}
+html{
+scroll-behavior:smooth;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+background:black;
+}
+
+ .nav-links{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+} 
+
+
+.menu-icon{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+@media(max-width:768px){
+
+.nav-links{
+display:none;
+flex-direction:column;
+}
+
+.nav-links.show{
+display:flex;
+}
+
+.menu-icon{
+display:block;
+}
+
+}
+.hero{
+    width: 100%;
+height:80vh;
+display:flex;
+align-items:center;
+text-align:center;
+background-repeat: no-repeat; 
+ background-size: cover; 
+  position: relative;  
+    overflow: hidden;  
+    justify-content: flex-start;  
+/* background:url("https://images.unsplash.com/photo-1549719386-74dfcbf7dbed") center/cover; */
+background-image: url(imges/port3.jpg);
+
+}
+
+
+.hero h1{
+font-size:50px;
+}
+
+button{
+background:#e63946;
+border:none;
+padding:12px 25px;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+section{
+padding:80px 10%;
+text-align:center;
+}
+
+.program-container{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.card{
+background:#1a1a1a;
+padding:30px;
+border-radius:10px;
+width:220px;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.gallery-container{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.gallery img{
+width:200px;
+border-radius:10px;
+transition: .3s;
+}
+.gallery img:hover{
+    transform: scale(1.05);
+}
+
+input, textarea{
+display:block;
+margin:10px auto;
+padding:10px;
+width:250px;
+}
+
+footer{
+background:black;
+padding:20px;
+}
+/* animations */
+.card{
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+.calculators{
+
+display:flex;
+justify-content:center;
+gap:40px;
+padding:80px 10%;
+flex-wrap:wrap;
+
+}
+
+.bmi-box,
+.calories-box{
+
+background:#1a1a1a;
+padding:30px;
+border-radius:10px;
+width:300px;
+text-align:center;
+
+}
+
+.calculators input{
+
+display:block;
+margin:10px auto;
+padding:10px;
+width:90%;
+
+}
+
+.calculators button{
+
+background:#e63946;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+cursor:pointer;
+
+}
